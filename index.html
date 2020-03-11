@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thực hành sự kiện chuật</title>
+</head>
+<body>
+    <form>
+        <img id="myImage" src="https://znews-photo.zadn.vn/w660/Uploaded/lce_jwqqc/2019_01_19/48310406_300771570779570_3068800445624352768_n_1.jpg"/>
+        <p>Click button below to move the image to the right</p>
+        <input type="button" value="Right" onclick="moveRight()"/>
+        <input type="button" value="Left" onclick="moveLeft()"/>
+        <script>
+            var imgObj = null;
+            imgObj = document.getElementById('myImage');
+            function init() {
+                imgObj.style.position = 'relative';
+                //imgObj.style.left = '0px';
+                imgObj.style.right = '0px';
+            }
+            function moveRight() {
+                //imgObj.style.left = parseInt(imgObj.style.left) + 10 + 'px';
+                imgObj.style.right = parseInt(imgObj.style.right) + 10 + 'px';
+            }
+            function moveLeft(){
+                //imgObj.style.left = (parseInt(imgObj.style.left) - 10) + 'px';
+                imgObj.style.right = (parseInt(imgObj.style.right) - 10) + 'px';
+            }
+            window.onload = init;
+        </script>
+    </form>
+</body>
+</html>
